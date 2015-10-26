@@ -22,6 +22,28 @@ var swiper = new Swiper('.main-banner-booking .swiper-container', {
 });
 
 
+var galleryTop = new Swiper('.bannerMainImgSection', {
+    nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 0,
+});
+
+
+var galleryThumbs = new Swiper('.bannerThumbImgSection', {
+    // spaceBetween: 10,
+    //centeredSlides: true,
+    // slidesPerView: '6',
+    touchRatio: 0.2,
+    slideToClickedSlide: true,
+    slidesPerView: 6,
+    paginationClickable: true,
+    spaceBetween: 10,
+    freeMode: true
+});
+
+galleryTop.params.control = galleryThumbs;
+galleryThumbs.params.control = galleryTop;
+
 
 // 3.0 lazy loading images unviel.js
 // -------------------------------------------
