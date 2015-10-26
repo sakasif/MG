@@ -1,0 +1,236 @@
+@import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,500,700);
+@import "https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.0/css/swiper.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css";
+@import "font-awesome";
+@import "animate.css";
+// Documentation starts here
+// ----------------------------------
+// 1.0  =========== Variables for the website
+// 2.0  =========== Mixins for the website
+// 3.0  =========== Global Elements
+// 4.0  =========== Typographical elements comes here
+// 5.0  =========== #landingpage
+// 6.0  =========== #page-header
+
+
+// 1.0
+// Variables for the website
+// ========================================================
+$baseurl: "../media"; // base url define for accessing images directly background-image:url(#{$baseurl}/image.png);
+
+$sprite-width: 50px; // width of sprite
+$sprite-height: 50px; // height of sprite
+$sprite: url(#{$baseurl}/sprite.png); // url for sprite file
+
+$brand : #006c03; // brand color
+$gray : #2d2e2e; // secondary color for brand
+$gray-light : #414141; // lighter color for gray
+$red : #960101; // red color
+$black : #0c121c; // black for MG
+
+
+$radius:2px; // Border radius thorough out the site
+
+
+// 2.0
+// Mixins for the site
+// ========================================================
+
+// Mixin for font &
+// font weight's are 300 - light, 500 - medium, 700 - bold
+// -------------------------------------------
+@mixin font($weight){
+	font-family: 'Roboto', sans-serif;
+	font-weight:$weight;
+}
+
+// Mixin for creating sprites
+// -------------------------------------------
+@mixin sprite($leftpos, $toppos){
+    background-image:$sprite;
+    background-repeat:no-repeat;
+    //background-position-x: -($sprite-width * $leftpos);
+    //background-position-y: -($sprite-height * $toppos);
+    background-position:($sprite-width * -$leftpos)($sprite-height * -$toppos);
+}
+
+// Mixin for text indent
+// -------------------------------------------
+@mixin texthide(){
+	text-indent:-9999px;
+	overflow:hidden;
+}
+
+// 3.0
+// Global elements
+// -------------------------------------------
+body {
+	@include font(500);
+}
+
+
+.clearAll {
+	clear:both;
+	display:block;
+}
+
+
+.relative {
+	position:relative;
+}
+
+
+figure {
+	position:relative;
+	img {
+		position:relative;
+		z-index:2;
+	}
+}
+// 4.0
+// typographical elements comes here
+// -------------------------------------------
+h1, .h1 {}
+h2, .h2 {
+	font-size:37px;
+	color:$brand;
+	@include font(700);
+	text-transform:uppercase;
+	letter-spacing:2px;
+	position:relative;
+	margin-bottom:30px;
+	padding-bottom:20px;
+	margin-top:0;
+}
+h2 b, .h2 b, h4 b{
+	@include font(700);
+	color:#000;
+
+}
+h3, .h3 {}
+h4, .h4 {
+	color:$brand;
+	@include font(700);
+	letter-spacing:1px;
+	margin-bottom:30px;
+	margin-top:0;
+	text-transform:uppercase;
+	font-size:20px;
+}
+h5, .h5 {}
+h6, .h6 {
+	@include font(700);
+	color:#000;
+	font-size:15px;
+}
+
+p {
+	margin-bottom:30px;
+	line-height:24px;
+	font-size:14px;
+	color:#000;
+}
+// Let the site Building Begin
+// =========================================================
+// 5.0 landingpage starts here
+// ---------------------------------
+.landingpage {
+	height:100%;
+	overflow:hidden;
+	article {
+		width:50%;
+		height:100%;
+		float:left;
+		background:url(#{$baseurl}/landing/pw_maze_black.png) left top #000;
+		.logo {
+			display:block;
+			text-align:center;
+			padding:22% 0 50px;
+		}
+		.center {
+			text-align:center;
+		}
+		.enterbtn {
+			background-color:$red;
+			padding:20px 80px;
+			color:#fff;
+			display:inline-block;
+			text-transform:uppercase;
+			letter-spacing:2px;
+			font-size:16px;
+			@include transition(all ease 0.5s);
+			&:hover {
+				background-color:#000;
+				text-decoration:none;
+			}
+		}
+		h2 {
+			color:#fff;
+			text-align:center;
+		}
+		&.sacc {
+			background:url(#{$baseurl}/landing/pw_maze_white.png) left top #000;
+			h2 {
+				color:#000;
+			}
+		}
+	}
+}
+
+
+// 6.0 page-header starts here
+// -----------------------------------
+#page-header{
+	.header-wrap {
+		background-color:$black;
+		@include clearfix();
+		.logo {
+			width:15%;
+			float:left;
+			border-right:$gray 1px solid;
+			padding:20px 0;
+			text-align:center;
+		}
+		.navigation {
+			width:85%;
+			float:left;
+			.top-nav {
+				border-bottom:1px solid $gray;
+				@include clearfix();
+				.secondary-nav {
+					float:left;
+					width:90%;
+					margin-bottom:0;
+					li {
+						float:left;
+						a {
+							color:#fff;
+							@include font(500);
+							letter-spacing:1px;
+							font-size:12px;
+							text-transform:uppercase;
+							padding:17px;
+							display:block;
+							&:hover {
+								text-decoration:none;
+							}
+						}
+					}
+				}
+				.language {
+					float:left;
+					width:10%;
+				}
+			}
+		}
+	}
+}
+
+
+// Additional files for running the project
+// =======================================================
+
+@import "tablet-portrait";
+@import "tablet-landscape";
+@import "mobile";
