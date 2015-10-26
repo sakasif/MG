@@ -214,14 +214,18 @@ p {
 		background-color:$black;
 		@include clearfix();
 		.logo {
-			width:15%;
+			width:25%;
 			float:left;
 			border-right:$gray 1px solid;
-			padding:20px 0;
+			padding:0 0;
 			text-align:center;
+			img {
+				width:100%;
+				height:auto;
+			}
 		}
 		.navigation {
-			width:85%;
+			width:75%;
 			float:left;
 			.top-nav {
 				border-bottom:1px solid $gray;
@@ -229,7 +233,7 @@ p {
 				.secondary-nav {
 					@include clearfix();
 					margin-bottom:0;
-					width:85%;
+					width:80%;
 					float:left;
 					li {
 						float:right;
@@ -254,7 +258,7 @@ p {
 					margin-bottom:0;
 					border-left:1px solid $gray;
 					float:left;
-					width:15%;
+					width:20%;
 					li {
 						float:left;
 						a {
