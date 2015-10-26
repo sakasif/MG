@@ -245,6 +245,52 @@ p {
 }
 
 
+// 7.0 Banner Section starts here
+// -----------------------------------
+
+.bannerSection {
+	margin: 0;
+	padding: 0;
+	@include clearfix();
+	position: relative;
+
+
+	.bannerThumbImgSection {
+	position: absolute;
+	width: 80%;
+	z-index: 9;
+	margin: 0px auto;
+	left: 0;
+	right: 0;
+	bottom: 0px;	
+
+		.swiper-slide {
+		// width: 25%;
+		// height: auto;	
+		}
+
+	}
+	
+
+}
+
+
+
+// GLobal Styings Elements
+// -----------------------------------
+
+
+.imgHold {
+
+	img {
+	width: 100%;
+	height: auto;	
+	}
+
+}
+
+
+
 // Additional files for running the project
 // =======================================================
 
