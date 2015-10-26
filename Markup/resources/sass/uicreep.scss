@@ -12,7 +12,7 @@
 // 4.0  =========== Typographical elements comes here
 // 5.0  =========== #landingpage
 // 6.0  =========== #page-header
- 
+// 9.0 ============ #mainFooter
 
 // 1.0
 // Variables for the website
@@ -67,6 +67,7 @@ $radius:2px; // Border radius thorough out the site
 // -------------------------------------------
 body {
 	@include font(500);
+	margin-top:130px;
 }
 
 
@@ -86,6 +87,28 @@ figure {
 	img {
 		position:relative;
 		z-index:2;
+	}
+}
+
+.default-btn {
+	background-color:$red;
+	padding:15px 50px;
+	color:#fff;
+	font-size:14px;
+	text-transform:uppercase;
+	letter-spacing:1.5px;
+	display:inline-block;
+	@include transition(all ease 0.5s);
+	&:hover {
+		text-decoration:none;
+		background-color:#000;
+		color:#fff;
+	}
+	&.invert {
+		background-color:#000;
+		&:hover {
+			background-color:$red;
+		}
 	}
 }
 // 4.0
@@ -182,6 +205,11 @@ p {
 // 6.0 page-header starts here
 // -----------------------------------
 #page-header{
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	z-index:10;
 	.header-wrap {
 		background-color:$black;
 		@include clearfix();
@@ -201,6 +229,8 @@ p {
 				.secondary-nav {
 					@include clearfix();
 					margin-bottom:0;
+					width:85%;
+					float:left;
 					li {
 						float:right;
 						a {
@@ -211,8 +241,36 @@ p {
 							text-transform:uppercase;
 							padding:18px;
 							display:block;
+							@include transition(all ease 0.5s);
 							&:hover {
+								color:$red;
 								text-decoration:none;
+							}
+						}
+					}
+				}
+				.social {
+					@include clearfix();
+					margin-bottom:0;
+					border-left:1px solid $gray;
+					float:left;
+					width:15%;
+					li {
+						float:left;
+						a {
+							font-size:14px;
+							color:#fff;
+							padding:15px 10px;
+							display:block;
+							@include transition(all ease 0.5s);
+							&:hover {
+								color:$red;
+								text-decoration:none;
+							}
+						}
+						&:first-child {
+							a {
+								padding-left:20px;
 							}
 						}
 					}
@@ -233,7 +291,9 @@ p {
 							text-transform:uppercase;
 							padding:18px;
 							display:block;
+							@include transition(all ease 0.5s);
 							&:hover {
+								color:$red;
 								text-decoration:none;
 							}
 						}
@@ -241,6 +301,55 @@ p {
 				}
 			}
 		}
+	}
+}
+
+// product-thumbnail starts here
+// ----------------------------------
+.content {
+	margin-bottom:30px;
+}
+.product-thumbnail {
+	margin-bottom:20px;
+	img {
+		width:100%;
+		height:auto;
+	}
+}
+
+
+// 9.0 mainFooter starts here
+// ----------------------------------
+#mainFooter {
+	border-top:1px solid #000;
+	@include clearfix();
+	.copyright {
+		float:left;
+		color:#000;
+		padding:10px 0;
+		margin-right:200px;
+		margin-bottom:0;
+	}
+	.footerlinks {
+		float:left;
+		li {
+			float:left;
+			a {
+				color:#000;
+				padding:10px;
+				@include transition(color ease 0.5s);
+				display:block;
+				&:hover {
+					text-decoration:none;
+					color:$red;
+				}
+			}
+		}
+	}
+	.nexa {
+		float:right;
+		padding:10px 0;
+		color:#000;
 	}
 }
 
