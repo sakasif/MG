@@ -30,15 +30,13 @@ var galleryTop = new Swiper('.bannerMainImgSection', {
 
 
 var galleryThumbs = new Swiper('.bannerThumbImgSection', {
-    // spaceBetween: 10,
-    //centeredSlides: true,
-    // slidesPerView: '6',
+    spaceBetween: 10,
+    centeredSlides: false,
+    slidesPerView: '6',
     touchRatio: 0.2,
     slideToClickedSlide: true,
-    slidesPerView: 6,
-    paginationClickable: true,
-    spaceBetween: 10,
-    freeMode: true
+    paginationClickable: false,
+    freeMode: false
 });
 
 galleryTop.params.control = galleryThumbs;
