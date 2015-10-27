@@ -326,7 +326,7 @@ p {
 // ----------------------------------
 #mainFooter {
 	border-top:1px solid #000;
-	@include clearfix();
+	@include clearfix(); 
 	.copyright {
 		float:left;
 		color:#000;
