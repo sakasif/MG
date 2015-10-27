@@ -52,3 +52,47 @@ $("img").unveil(0, function() {
 	    this.style.opacity = 1;
 	 });
 });
+
+
+$('.bannerThumbImgSection').flexslider({
+animation: "slide",
+directionNav: false,
+controlNav: false,
+animationLoop: false,
+slideshow: false,
+itemWidth: 170,
+itemMargin: 0,
+asNavFor: '.bannerMainImgSection'
+});
+ 
+$('.bannerMainImgSection').flexslider({
+animation: "slide",
+directionNav: false,
+controlNav: false,
+animationLoop: true,
+slideshow: false,
+sync: ".bannerThumbImgSection"
+});
+
+
+
+$('.chart').easyPieChart({
+	barColor: '#ef1e25',
+	trackColor: '#f9f9f9',
+	scaleColor: '#000',
+	scaleLength: 5,
+	lineCap: 'round',
+	lineWidth: 7,
+	trackWidth: undefined,
+	size: 120,
+	rotate: 0,
+	animate: {
+		duration: 1000,
+		enabled: true
+	},
+	
+	easing: 'easeOutBounce',
+	onStep: function(from, to, percent) {
+		$(this.el).find('.percent').text(Math.round(percent));
+	}
+});

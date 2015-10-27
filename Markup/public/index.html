@@ -67,48 +67,71 @@
 
         <!-- Banner Section -->
         <section class="bannerSection">
-
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-              </ol>
-
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner" role="listbox">
-                
-                    <!-- Banner Slides -->
-                    <div class="item active">
-                      <div class="imgHold"><img src="ui/media/banner/home-banner-img1.jpg" alt=""></div>
-                    </div>
-                    <!-- Banner Slides -->
-                    
-                    <!-- Banner Slides -->
-                    <div class="item">
-                      <div class="imgHold"><img src="ui/media/banner/home-banner-img1.jpg" alt=""></div>
-                    </div>
-                    <!-- Banner Slides -->
-
-                    <!-- Banner Slides -->
-                    <div class="item">
-                      <div class="imgHold"><img src="ui/media/banner/home-banner-img1.jpg" alt=""></div>
-                    </div>
-                    <!-- Banner Slides -->
-
-              </div>
-
-              <!-- Controls -->
-              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
+            
+            <!-- Main Image Section -->
+            <div class="bannerMainImgSection flexslider">
+              <ul class="slides">
+                <li>
+                  <img src="ui/media/banner/home-banner-img1.jpg" alt="" />
+                </li>
+                <li>
+                  <img src="ui/media/banner/home-banner-img1.jpg" alt="" />
+                </li>
+                <li>
+                  <img src="ui/media/banner/home-banner-img1.jpg" alt="" />
+                </li>
+                <li>
+                  <img src="ui/media/banner/home-banner-img1.jpg" alt="" />
+                </li>
+                <li>
+                  <img src="ui/media/banner/home-banner-img1.jpg" alt="" />
+                </li>
+                <li>
+                  <img src="ui/media/banner/home-banner-img1.jpg" alt="" />
+                </li>
+                <li>
+                  <img src="ui/media/banner/home-banner-img1.jpg" alt="" />
+                </li>
+                <!-- items mirrored twice, total of 12 -->
+              </ul>
             </div>
+            <!-- Main Image Section -->
+            
+            <!-- Banner Thumb Image Section -->
+            <div class="bannerThumbImgSection flexslider">
+              <ul class="slides">
+                <li>
+                  <div class="thumbHold"><img src="ui/media/banner/thumb-1.png" alt="" /></div>
+                  <h2>MG3Xross</h2>
+                </li>
+                <li>
+                  <div class="thumbHold"><img src="ui/media/banner/thumb-1.png" alt="" /></div>
+                  <h2>MG3Xross</h2>
+                </li>
+                <li>
+                  <div class="thumbHold"><img src="ui/media/banner/thumb-1.png" alt="" /></div>
+                  <h2>MG3Xross</h2>
+                </li>
+                <li>
+                  <div class="thumbHold"><img src="ui/media/banner/thumb-1.png" alt="" /></div>
+                  <h2>MG3Xross</h2>
+                </li>
+                <li>
+                  <div class="thumbHold"><img src="ui/media/banner/thumb-1.png" alt="" /></div>
+                  <h2>MG3Xross</h2>
+                </li>
+                <li>
+                  <div class="thumbHold"><img src="ui/media/banner/thumb-1.png" alt="" /></div>
+                  <h2>MG3Xross</h2>
+                </li>
+                <li>
+                  <div class="thumbHold"><img src="ui/media/banner/thumb-1.png" alt="" /></div>
+                  <h2>MG3Xross</h2>
+                </li>
+                <!-- items mirrored twice, total of 12 -->
+              </ul>
+            </div>
+            <!-- Banner Thumb Image Section -->
 
         </section>
         <!-- Banner Section
@@ -196,7 +219,10 @@
                             <li class="col-md-4">
                                 
                                 <div class="circleStats">
-                                    <img src="ui/media/element/stats-circle.png" alt="">
+                                    <span data-percent="35" class="chart">
+                                        <span class="percent">86</span>
+                                        <canvas height="110" width="110"></canvas>
+                                    </span>
                                 </div>
 
                                 <h2><span>Lorem</span> IpsumDOlor</h2>
@@ -208,7 +234,10 @@
                             <li class="col-md-4">
                                 
                                 <div class="circleStats">
-                                    <img src="ui/media/element/stats-circle.png" alt="">
+                                    <span data-percent="50" class="chart">
+                                        <span class="percent">86</span>
+                                        <canvas height="110" width="110"></canvas>
+                                    </span>
                                 </div>
 
                                 <h2><span>Lorem</span> IpsumDOlor</h2>
@@ -220,7 +249,10 @@
                             <li class="col-md-4">
                                 
                                 <div class="circleStats">
-                                    <img src="ui/media/element/stats-circle.png" alt="">
+                                    <span data-percent="86" class="chart">
+                                        <span class="percent">86</span>
+                                        <canvas height="110" width="110"></canvas>
+                                    </span>
                                 </div>
 
                                 <h2><span>Lorem</span> IpsumDOlor</h2>
@@ -259,6 +291,23 @@
         </section>
         <!-- Home Bottom Section  
         ------------------------------------------- -->
+        
+
+        <!-- Footer Section -->
+        <footer id="mainFooter">
+            <div class="container">
+                <p class="copyright">Copyright 2015. All Rights reserved</p>
+                <ul class="footerlinks list-unstyled">
+                    <li><a href="javascript:;">Sitemap</a></li>
+                    <li><a href="javascript:;">Legal</a></li>
+                    <li><a href="javascript:;">Privacy</a></li>
+                    <li><a href="javascript:;">Saicgroup</a></li>
+                </ul>
+                <p class="nexa">Web design By NEXA.</p>
+            </div>
+        </footer>
+        <!-- Footer Section  
+        ------------------------------------------ -->
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -270,6 +319,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/unveil/1.3.0/jquery.unveil.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.0/js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/jquery.flexslider.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.4/jquery.easypiechart.min.js"></script>
     <script src="ui/js/li_scroll.js"></script>
     <script src="ui/js/uicreep.js"></script>
   </body>
