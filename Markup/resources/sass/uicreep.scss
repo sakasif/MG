@@ -67,7 +67,7 @@ $radius:2px; // Border radius thorough out the site
 // -------------------------------------------
 body {
 	@include font(500);
-	margin-top:130px;
+	//margin-top:130px;
 }
 
 
@@ -120,7 +120,7 @@ h2, .h2 {
 	color:$brand;
 	@include font(700);
 	text-transform:uppercase;
-	letter-spacing:2px;
+	letter-spacing:1px;
 	position:relative;
 	margin-bottom:30px;
 	padding-bottom:20px;
@@ -153,6 +153,7 @@ p {
 	line-height:24px;
 	font-size:14px;
 	color:#000;
+	@include font(300);
 }
 // Let the site Building Begin
 // =========================================================
@@ -362,24 +363,75 @@ p {
 // 10.0 bannerSection starts here
 // --------------------------------
 .bannerSection {
-	margin-top:-130px;
+	//margin-top:-130px;
+	padding: 0;
+	//margin: 0;
+	position: relative;
+
 }
 .bannerThumbImgSection {
-	margin-top:-240px;
+	//margin-top:-240px;
 }
 
 
 // 11.0 service starts here
 // ----------------------------------
+
+
 .service {
-	.box {
-		.service-image {
-			img {
-				width:100%;
-				height:auto;
-			}
+	padding: 60px 0 140px 0;
+	@include clearfix();
+	
+	.featuredBox {
+	margin: 0;
+	padding: 0;
+	@include clearfix();
+
+		.imgHold {
+		margin-bottom: 15px;	
 		}
+
+		h2 {
+		font-size: 14px;
+		text-transform: uppercase;
+		@include font(700);	
+		color: #000;
+		margin: 0 0 15px 0;
+		padding: 0; 
+		}
+
+		p {
+		margin-bottom: 15px;	
+		}
+
+		.findOutMore {
+		color: #000;
+		font-size: 14px;
+		@include font(700);
+		text-transform: uppercase;
+
+			span.arrow {
+			width: 7px;
+			height: 11px;
+			display: inline-block;
+			@include sprite(0, 0);
+			margin-right: 10px;	
+			}
+
+		}
+
 	}
+
+}
+
+// 12.0 Home Bottom Section
+// --------------------------------------
+
+.homeBottomSection {
+background-image: url(#{$baseurl}/bg/homebtm-dark.jpg);
+background-attachment: fixed;
+background-size:cover;
+height: 300px;	
 }
 
 
