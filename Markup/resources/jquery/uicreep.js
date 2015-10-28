@@ -97,6 +97,19 @@ $('.chart').easyPieChart({
 	}
 });
 
+
+$("#page-header .header-wrap .navigation .bottom-nav .primary-nav > li").hover(function(){
+
+    $(this).find("ul.dropDown").slideDown().stop(true).delay(10);
+
+}, function(){
+
+    $(this).find("ul.dropDown").slideUp();
+
+})
+
+
+
 $(".bannerThumbImgSection ul li").click(function(){
 
 	new WOW().init();

@@ -300,6 +300,7 @@ p {
 					margin-bottom:0;
 					li {
 						float:right;
+						position: relative;
 						a {
 							color:#fff;
 							@include font(500);
@@ -313,6 +314,40 @@ p {
 								color:$red;
 								text-decoration:none;
 							}
+						}
+
+						ul.dropDown {
+						position: absolute;
+						min-width: 168px;
+						padding: 0;
+						list-style: none;
+						top: 55px;
+						left: 0;
+						display: none;
+
+							li {
+							float: none;
+							@include clearfix();
+
+								&:last-child {
+
+									a {
+									border-bottom: 0;	
+									}
+
+								}
+
+								a {
+								padding: 10px;
+								background-color: $red;
+								color: #fff;
+								display: block;
+								text-transform: uppercase;
+								border-bottom: 1px solid #fff;	
+								}
+
+							}
+
 						}
 					}
 				}
