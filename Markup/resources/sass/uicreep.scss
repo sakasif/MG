@@ -477,6 +477,11 @@ p {
 	display: inline-block;
 	margin: 10px 0 0 0;
 
+		&:hover {
+		color: #fff;
+		text-decoration: none;	
+		}
+
 	span.arrow {
 	width: 7px;
 	height: 11px;
