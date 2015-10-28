@@ -96,3 +96,6 @@ $('.chart').easyPieChart({
 		$(this.el).find('.percent').text(Math.round(percent));
 	}
 });
+
+
+new WOW().init();

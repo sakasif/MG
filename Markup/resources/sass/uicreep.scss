@@ -635,7 +635,10 @@ border: 0;
 margin: 0;
 }
 
+.flexslider .slides > li:first-child {display: block; -webkit-backface-visibility: visible;}
 
+// Global Styles
+// ---------------------------------
 
 .imgHold {
 
