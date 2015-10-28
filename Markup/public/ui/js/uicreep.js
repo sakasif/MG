@@ -97,5 +97,11 @@ $('.chart').easyPieChart({
 	}
 });
 
+$(".bannerThumbImgSection ul li").click(function(){
+
+	new WOW().init();
+	
+})
+
 
 new WOW().init();

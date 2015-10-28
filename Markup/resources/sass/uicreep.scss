@@ -383,7 +383,99 @@ p {
 }
 
 .bannerMainImgSection  {
-position: relative;	
+	position: relative;	
+
+	ul {
+
+		li {
+		position: relative;	
+		
+			.bannerFix {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+
+				.bannerTextContent {
+				width: 30%;
+				margin: 0;
+				top: 240px;
+				left: 15px;
+				z-index: 3;
+				position: absolute;
+
+					h1 {
+					@include font(700);
+					font-size: 90px;
+					color: #fff;
+					border-bottom: 1px solid #fff;
+					margin: 0 0 10px 0;
+					padding: 0 0 15px 0;
+					text-transform: uppercase;
+
+						span {
+						font-size: 24px;
+						display: block;	
+						@include font(300);
+						}
+
+					}
+
+					h2 {
+					@include font(700);
+					font-size: 24px;
+					color: #fff;
+					border-bottom: 1px solid #fff;
+					margin: 0 0 5px 0;
+					padding: 0 0 15px 0;
+					text-transform: uppercase;
+
+						span {
+						font-size: 14px;
+						display: block;	
+						@include font(300);
+						}
+
+					}
+
+				}
+
+				.bannerFeaturedCar {
+				position: absolute;
+				top: 200px;
+				right: -140px;
+				width: 90%;	
+				z-index: 2;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.exploreBttn {
+	color: #fff;
+	font-size: 14px;
+	@include font(700);
+	text-transform: uppercase;
+	padding: 10px 40px;
+	background-color: #960101;
+	display: inline-block;
+	margin: 10px 0 0 0;
+
+	span.arrow {
+	width: 7px;
+	height: 11px;
+	display: inline-block;
+	@include sprite(1, 0);
+	margin-right: 10px;	
+	}
+
 }
 
 .bannerThumbImgSection {
@@ -647,6 +739,10 @@ margin: 0;
 	height: auto;;
 	}
 
+}
+
+.relativeDiv {
+position: relative;	
 }
 
 // Additional files for running the project
