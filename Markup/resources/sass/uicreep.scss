@@ -27,7 +27,7 @@ $sprite: url(#{$baseurl}/sprite.png); // url for sprite file
 $brand : #006c03; // brand color
 $gray : #2d2e2e; // secondary color for brand
 $gray-light : #414141; // lighter color for gray
-$red : #960101; // red color
+$red : #f61e29; // red color
 $black : #0c121c; // black for MG
 
 
@@ -383,7 +383,10 @@ p {
 }
 
 .bannerMainImgSection  {
-	position: relative;	
+	position: relative;
+	background-image: url(#{$baseurl}/banner/home-banner-img1.jpg);
+	background-attachment: fixed;
+	background-size:cover;		
 
 	ul {
 
@@ -440,6 +443,12 @@ p {
 
 					}
 
+					p {
+					color: #fff;	
+					margin-bottom: 10px;
+					@include font(500);
+					}
+
 				}
 
 				.bannerFeaturedCar {
@@ -464,7 +473,7 @@ p {
 	@include font(700);
 	text-transform: uppercase;
 	padding: 10px 40px;
-	background-color: #960101;
+	background-color: #f61e29;
 	display: inline-block;
 	margin: 10px 0 0 0;
 
@@ -481,7 +490,7 @@ p {
 .bannerThumbImgSection {
 	position: absolute;
 	bottom: 30px;
-	width: 75%;
+	width: 63%;
 	margin: 0px auto !important;
 	left: 0;
 	right: 0;
@@ -623,11 +632,18 @@ ul.racingsStatsListings {
 
 		h2 {
 		@include font(700);
-		font-size: 18px;
+		font-size: 16px;
 		text-transform: uppercase;
 		color: #fff;
 		margin: 0 0 15px 0;
 		text-align: center;	
+
+			span {
+			display: block;
+			margin-bottom: 5px;
+			@include font(300);	
+			}
+
 		}
 
 		p {
@@ -727,7 +743,7 @@ border: 0;
 margin: 0;
 }
 
-.flexslider .slides > li:first-child {display: block; -webkit-backface-visibility: visible;}
+//.flexslider .slides > li:first-child {display: block; -webkit-backface-visibility: visible;}
 
 // Global Styles
 // ---------------------------------
