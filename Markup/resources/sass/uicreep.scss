@@ -859,6 +859,31 @@ padding: 30px 0;
 }
 
 
+.findAdelerBttn {
+position: fixed;
+right: 0;
+top: 35%;
+z-index: 9;
+outline: 0;	
+}
+
+.findAdelerPopup {
+background-color: rgba(0, 0, 0, 0.9);
+width: 100%;
+position: fixed;
+left: 0;
+right: 0;
+top: 35%;
+display: none;
+
+	.contentSection {
+	padding: 20px 0;
+	@include clearfix();	
+	}
+
+}
+
+
 
 // Flex Slider Fixes
 // ---------------------------------
