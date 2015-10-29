@@ -75,6 +75,15 @@ sync: ".bannerThumbImgSection"
 });
 
 
+$('.innerBannerSection').flexslider({
+    slideshow: 'true',
+    animation: "slide",
+    directionNav: false,
+    controlNav: false,
+    useCSS: true
+});
+
+
 
 $('.chart').easyPieChart({
 	barColor: '#ef1e25',
