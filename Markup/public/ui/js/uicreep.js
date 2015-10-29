@@ -125,5 +125,17 @@ $(".bannerThumbImgSection ul li").click(function(){
 
 })
 
+$(".mapPopUp").fancybox({
+    maxWidth: 780,
+    maxHeight: 420,
+    fitToView: false,
+    width: '100%',
+    height: '100%',
+    autoSize: false,
+    closeClick: false,
+    openEffect: 'none',
+    closeEffect: 'none'
+});
+
 
 new WOW().init();
