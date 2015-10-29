@@ -1,5 +1,62 @@
 @media (max-width: $screen-xs-max) and (orientation: portrait){
     
 
+#page-header {
+position: static;
+
+	.container {
+	padding: 0;	
+	}
+
+	.header-wrap {
+
+		.logo {
+		width: 100%;
+		float: none;
+		display: block;
+		text-align: center;	
+		}
+
+		.navigation {
+		width: 100%;
+		float: none;
+
+			.top-nav {
+
+				.secondary-nav {
+				float: none;
+				width: 100%;
+				margin: 0 0 -1px -1px;
+
+					li {
+					width: 49.65%;
+					float: left;
+					margin: 0 0 1px 1px;
+
+						a {
+						background-color: #182337;
+						padding: 10px;	
+						}
+
+					}
+
+				}
+
+				.social {
+				float: none;
+				width: 100%;
+				border-left: 0;
+				border-top: 1px solid #2d2e2e;	
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+
 
 }
