@@ -512,6 +512,10 @@ p {
 	display: inline-block;
 	margin: 10px 0 0 0;
 
+		&.black {
+		background-color: #000;	
+		}
+
 		&:hover {
 		color: #fff;
 		text-decoration: none;	
